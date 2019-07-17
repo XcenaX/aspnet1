@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="stylesheet" href="../../Content/Style.css" />
+</head>
+<body>
+    <div class="main">
+        <div class="row">
+            <h2 class="header">@ViewBag.Title</h2>
+            <div>                
+                    <div class="productBlock">
+                        <div class="productText">
+                            @ViewBag.currentObject.Name
+                        </div>
+                        <div class="productText">
+                            @ViewBag.currentObject.Price
+                        </div> 
+                        <div class="productText">
+                            
+                            <img src="https://ritual-saratov.ru/images/groby/lak/Grob-lakirovannyj-@{@ViewBag.currentObject.Id}.jpg" style="width:130px; height:70px" />
+                        </div>
+                    </div>         
+					<a href="~/Product/GetProducts" class="seeButton">Назад</a>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

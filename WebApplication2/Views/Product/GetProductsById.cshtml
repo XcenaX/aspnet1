@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="stylesheet" href="../../Content/Style.css" />
+</head>
+<body>
+    <div class="row">
+        <div class="header">
+            <h1 class="headerBlock">@ViewBag.Title</h1>
+            <ul class="headerBlock select">
+                <li>Все</li>
+                @foreach (var item in ViewBag.Categories)
+                {
+                    <li><a href="~/Product/GetProductsById/@item.Id">@item.Name </a></li>
+                }
+            </ul>
+            <a class="headerBlock" href="~/Product/AddProduct/">Добавить товар</a>
+            <a class="headerBlock" href="~/Product/Login/">Вход</a>
+            <a class="headerBlock" href="~/Product/Register/">Регистрация</a>
+        </div>
+        <div>
+            @foreach (var item in ViewBag.Products)
+            {
+                <div class="productBlock">
+                    <div class="productText">
+                        @item.Name
+                    </div>
+                    <div class="productText">
+                        @item.Price
+                    </div>
+                    <a href="~/Product/GetProduct/@item.Id" class="seeButton">Посмотреть</a>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

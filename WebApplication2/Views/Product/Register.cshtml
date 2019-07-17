@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link type="text/css" rel="stylesheet" href="../../Content/Style.css" />
+</head>
+<body>
+    <div class="header">
+        <h1 class="headerBlock">@ViewBag.Title</h1>
+        <a class="headerBlock" href="~/Product/GetProducts/">Главная</a>
+        <a class="headerBlock" href="~/Product/AddProduct/">Добавить товар</a>
+        <a class="headerBlock" href="~/Product/Login/">Вход</a>
+    </div>
+
+    <div class="main">
+        <form method="post" action="~/Account/Register">
+            <div><span>Регистрация</span></div>
+            <div><input placeholder="Логин" class="inputData mainText" id="login" name="Login"></div>
+            <div><input placeholder="Пароль" class="inputData mainText" id="password" name="Password"></div>
+            <div><input placeholder="Ф.И.О" class="inputData mainText" id="fio" name="FIO"></div>
+            <div><button class="button mainText" type="submit">Регистрация</button></div>
+            <span class="mainText" style="color:red">@ViewBag.Message</span>
+        </form>
+</div>
+</body>
+</html>
